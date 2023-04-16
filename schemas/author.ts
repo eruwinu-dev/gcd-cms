@@ -20,12 +20,33 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'licenses',
+      title: 'Licenses',
+      type: 'array',
+      of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'role',
+      title: 'Role',
+      type: 'string',
+    }),
+    defineField({
+      name: 'real',
+      title: 'Real Member',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'blogBio',
+      title: 'Blog Bio',
+      type: 'text',
     }),
     defineField({
       name: 'bio',

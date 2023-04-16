@@ -20,6 +20,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -37,7 +42,16 @@ export default defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'category'},
+          options: {
+            filter: 'categoryType == $type',
+            filterParams: {type: 'post'},
+          },
+        },
+      ],
     }),
     defineField({
       name: 'publishedAt',
