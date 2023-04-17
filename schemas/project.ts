@@ -45,17 +45,8 @@ export default defineType({
       type: 'array',
       of: [
         {
-          type: 'string',
-        },
-      ],
-    }),
-    defineField({
-      name: 'roles',
-      title: 'Roles',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
+          type: 'reference',
+          to: {type: 'projectMember'},
         },
       ],
     }),

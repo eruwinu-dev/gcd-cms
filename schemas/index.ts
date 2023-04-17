@@ -5,6 +5,7 @@ import author from './author'
 import project from './project'
 import authorList from './authorList'
 import projectList from './projectList'
+import projectMember from './projectMember'
 import youtube from './youtube'
 
 export const schemaTypes = [
@@ -13,6 +14,7 @@ export const schemaTypes = [
   authorList,
   category,
   project,
+  projectMember,
   projectList,
   blockContent,
   youtube,
