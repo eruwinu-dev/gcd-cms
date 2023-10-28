@@ -61,6 +61,18 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'team',
+      title: 'Team',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Los Angeles', value: 'los-angeles'},
+          {title: 'Manila', value: 'manila'},
+        ],
+        layout: 'radio',
+      },
+    }),
   ],
   preview: {
     select: {
